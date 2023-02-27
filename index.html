@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zamowienietext</title>
+    <style>
+        th{
+            background-color: #cccccc;
+            width: 200px;
+        }
+        td{
+            width: 150px;
+            background-color: whitesmoke;
+        }
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of people</h1>
+    <form action="process.php" method="get">
+        <table>
+            <tr>
+                <th></th>
+                <th>To fill</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" size="20" maxlength="70" required></td>
+            </tr>
+            <tr>
+                <td>Surname</td>
+                <td><input type="text" name="surname" size="20" maxlength="70" required></td>
+            </tr>
+            <tr>
+                <td>Nickname</td>
+                <td><input type="text" name="nickname" size="20" maxlength="70"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="M">Male <input type="radio" name="gender" value="F">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Telephone</td>
+                <td><input type="number" name="telephone"></td>
+            </tr>
+            <tr>
+                <td>Mail</td>
+                <td><input type="email" name="mail"></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><select name="country" required>
+                    <option value="Poland">Poland</option>
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                    <option value="England">England</option>
+                    <option value="Deutschland">Deutschland</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Languages</td>
+                <td>
+                    Polish <input type="checkbox" name="polish" value="polish"><br>
+                    English <input type="checkbox" name="english" value="english"><br>
+                    Deutsch <input type="checkbox" name="deutsch" value="deutsch"><br>
+                    Other <input type="checkbox" name="other" value="other">
+                </td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td><textarea name="hobby" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Send form"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
